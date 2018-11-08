@@ -86,6 +86,8 @@ public class NioServer {
                     buf.flip();
                     SocketChannel clientChannel = (SocketChannel) key.channel();
 
+                    //Thread.sleep(5000);
+
                     clientChannel.write(buf);
 
                     if (!buf.hasRemaining()) {
